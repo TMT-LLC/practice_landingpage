@@ -86,6 +86,7 @@ a {
     gap: 25px
 }
 
+/* TEXT AUTO SIZE PRESET */
 .section1-left .main-text {
     font-size: 36px;
     max-width: 300px
@@ -93,10 +94,10 @@ a {
 
 .section1-left .sub-text {
     font-size: 18px;
-
     max-width: 500px
 }
 
+/* BUTTON AUTO SIZE PRESET */
 .signup-button .button{
     background-color: #777777;
     color:#000000;
@@ -111,6 +112,7 @@ a {
     align-self: center;
 }
 
+/* IMAGE AUTO SIZE PRESET */
 .main-img {
     width: 500px;
     max-width: 100%;
@@ -128,6 +130,21 @@ a {
     flex-flow: column wrap;
     
     align-items: center;
+
+    align-content: space-evenly;
+
+    padding-top: 30px;
+    padding-bottom: 250px;
+
+    gap: 50px
+
+}
+
+.topic-header .main-text{
+    font-size: 36px;
+    max-width: 600px;
+
+
 }
 
 /* X */
@@ -137,15 +154,16 @@ a {
 
     flex-flow: row wrap;
 
-    /* justify-content: space-between;
-    align-items: space-between;
-    align-content: space-between; */
+    justify-content: center;
+    gap: 50px;
 }
 
 .block {
     display: flex;
 
-    flex-flow: column wrap
+    flex-flow: column wrap;
+
+    align-items: center;
 }
 
 .block-img {
@@ -155,7 +173,10 @@ a {
 }
 
 .block-text {
-    width: 200px;
+    font-size: 12px;
+    max-width: 200px;
+
+    text-align: center;
 }
 /* BOTTOM OF PAGE */
 
