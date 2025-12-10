@@ -1,9 +1,137 @@
 /* style.css */
 
+@font-face {
+    font-family: "Cinzel";
+    src: url('fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
+}
+
 * {
-    border: 2px dotted red;
+    /* border: 1px dashed #ff0000; */
+    margin: 0px;
+    padding: 0px;
+    font-family: "Cinzel";
 }
 
 body {
+    height: 100vh;
     display: flex;
+    flex-flow: column;
+
+}
+
+/* TOP OF PAGE */
+
+.header-container {
+   /* Reconfigure this first if necessary!!! */
+   display: flex;
+   background-color: #000000;
+
+   justify-content: space-around;
+   align-items: center;
+   
+   padding: 16px 0px;
+
+   gap: 20px;
+}
+
+.header-logo {
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+}
+
+.header-links {
+    display: flex;
+    font-size: 16px;
+
+    gap: 10px;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #777777;
+}
+
+/* MIDDLE OF PAGE  */
+
+.section1 {
+    background-color: #c6ac03;
+    
+    display: flex;
+    flex-flow: row wrap;
+
+    padding: 100px 100px;
+    gap: 150px;
+
+    /* X */
+
+    justify-content: center;
+    align-items: space-between;
+}
+
+.section1-left {
+    display: flex;
+    flex-flow: column wrap;
+
+    /* border: 2px dotted blue; */
+
+    /* THIS MESSES WITH EXPANDING OF SECTIONS */
+    flex: 1 1; 
+
+    /* X */
+
+    gap: 25px;
+}
+
+.section1-left .main-text {
+    font-size: 36px;
+}
+
+.section1-left .sub-text {
+    font-size: 18px;
+}
+
+.signup-button .button{
+    background-color: #777777;
+    color:#000000;
+}    
+
+/* Section 1 Right */
+.section1-right {
+    display: flex;
+}
+
+.main-image {
+    width: 500px;
+    max-width: 100%;
+
+}
+
+/* BOTTOM OF PAGE */
+
+.footer-container {
+   margin-top: auto;
+   
+}
+.copywright{
+    display: flex;
+    justify-content: center;
+
+    padding: 16px;
+
+    background-color: #c6ac03;
+}
+
+button {
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 18px;
+    border: none
 }
