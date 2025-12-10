@@ -26,18 +26,20 @@ body {
    display: flex;
    background-color: #000000;
 
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
    
-   padding: 16px 0px;
+   padding: 10px 50px;
 
-   gap: 20px;
+   gap: 50px;
 }
 
 .header-logo {
     font-size: 32px;
     font-weight: 500;
     color: white;
+
+    justify-self: center;
 }
 
 .header-links {
@@ -61,59 +63,100 @@ a {
 
 /* MIDDLE OF PAGE  */
 
+/* SECTION 1 */
+
 .section1 {
     background-color: #c6ac03;
     
     display: flex;
     flex-flow: row wrap;
 
-    padding: 100px 100px;
-    gap: 150px;
-
-    /* X */
-
     justify-content: center;
-    align-items: space-between;
+    align-items: center;
+
+    padding: 200px 100px;
+
+    gap: 200px;
 }
 
 .section1-left {
     display: flex;
     flex-flow: column wrap;
 
-    /* border: 2px dotted blue; */
-
-    /* THIS MESSES WITH EXPANDING OF SECTIONS */
-    flex: 1 1; 
-
-    /* X */
-
-    gap: 25px;
+    gap: 25px
 }
 
 .section1-left .main-text {
     font-size: 36px;
+    max-width: 300px
 }
 
 .section1-left .sub-text {
     font-size: 18px;
+
+    max-width: 500px
 }
 
 .signup-button .button{
     background-color: #777777;
     color:#000000;
+
+    padding: 10px 50px
 }    
 
 /* Section 1 Right */
 .section1-right {
     display: flex;
+
+    align-self: center;
 }
 
-.main-image {
+.main-img {
     width: 500px;
     max-width: 100%;
 
 }
 
+/* SECTION 2 */
+
+.section2 {
+    background-color: #000000;
+    color: #fff;
+
+    display: flex;
+
+    flex-flow: column wrap;
+    
+    align-items: center;
+}
+
+/* X */
+
+.info-blocks {
+    display: flex;
+
+    flex-flow: row wrap;
+
+    /* justify-content: space-between;
+    align-items: space-between;
+    align-content: space-between; */
+}
+
+.block {
+    display: flex;
+
+    flex-flow: column wrap
+}
+
+.block-img {
+    width: 250px;
+    max-width: 100%;
+
+}
+
+.block-text {
+    width: 200px;
+}
 /* BOTTOM OF PAGE */
 
 .footer-container {
