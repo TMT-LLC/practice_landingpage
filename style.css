@@ -179,22 +179,22 @@ a {
 
 /* Section 3 */
 .section3 {
-    padding: 150px 200px;
+    padding: 150px;
 
     background-color: #C0C0C0;
+
+    display: flex;
+
+    flex-flow: column wrap;
+
+    align-content: center;
 }
 
 .business-quote {
     display: flex;
 
     flex-flow: column wrap;
-
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-
     gap: 20px;
-
 }
 
 .business-quote .main-text {
@@ -211,13 +211,38 @@ a {
     padding-right: 50px
 }
 
-/* Section 3 */
+/* Section 4 */
+
+.section4 {
+    display: flex;
+
+    flex-flow: row wrap;
+
+    margin: 100px;
+
+    justify-content: space-around;
+    gap: 100px;
+
+    background: #000000;
+
+    border-radius: 12px;
+    padding: 50px;
+    font-size: 18px;
+    border: none;
+
+    color: #fff;
+}
+
+.signup-message .main-text {
+    font-size: 24px;
+    font-weight: 500
+}
+
 
 /* BOTTOM OF PAGE */
 
 .footer-container {
    margin-top: auto;
-   
 }
 .copywright{
     display: flex;
@@ -228,9 +253,21 @@ a {
     background-color: #FFD700;
 }
 
-button {
+.button1 {
     border-radius: 12px;
-    padding: 10px;
+    padding: 10px 30px;
     font-size: 18px;
     border: none
+}
+
+.button2 {
+    border-radius: 12px;
+    padding: 10px 30px;
+    font-size: 18px;
+
+    border: 2px solid white;
+
+    background-color: black;
+    color:#fff
+
 }
