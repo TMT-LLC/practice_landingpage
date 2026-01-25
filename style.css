@@ -11,6 +11,10 @@
     font-family: "Cinzel";
 }
 
+.timbuktu {
+    font-family: 'wingdings'
+}
+
 body {
     height: 100vh;
     display: flex;
