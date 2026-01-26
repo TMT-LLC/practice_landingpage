@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Cinzel";
-    src: url('fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
+    src: url('/assets/fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
 }
 
 * {
@@ -42,6 +42,7 @@ body {
 .header-links {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     gap: 20px;
     font-size: 16px;
 }
