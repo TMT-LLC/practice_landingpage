@@ -1,19 +1,66 @@
 @font-face {
-    font-family: "Cinzel";
+    font-family: 'Cinzel';
     src: url('/assets/fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
 }
 
+/* Logo default state (black before animation) */
+.header-logo {
+    font-family: 'Cinzel', serif;
+    color: black;            /* start black */
+    animation: logoFadeIn 5s forwards; /* play once on load */
+}
+
+/* Keyframes for fade from black → white */
+@keyframes logoFadeIn {
+    0%, 10%   { color: black; }   /* initial black */
+    100% { color: white; }   /* final white */
+}
+
+
+/* Universal Configuration */
 * {
     margin: 0;
     padding: 0;
-    font-family: "Cinzel";
-}
-
-.timbuktu {
-    font-family: 'wingdings'
+    font-family: 'Cinzel', serif;
 }
 
 /* HEADER */
+
+/* Animated Logo Switching from gold rock, coin, bar */
+.logo-images {
+  position: relative;
+  width: 0px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* All images stacked */
+.logo-images img {
+  position: absolute;
+  opacity: 0;
+  animation: switchImage 9s steps(1) infinite;
+}
+
+/* Individual image sizes */
+.logo-rock { width: 75px; height: 75px; }
+.logo-coin { width: 40px; height: 40px; }
+.logo-bar  { width: 75px; height: 75px; }
+
+/* Timing offsets */
+.logo-images img:nth-child(1) { animation-delay: 0s; }
+.logo-images img:nth-child(2) { animation-delay: 3s; }
+.logo-images img:nth-child(3) { animation-delay: 6s; }
+
+/* Hard switch keyframes */
+@keyframes switchImage {
+  0%   { opacity: 1; }
+  33.5%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
 .header-container {
     display: flex;
     flex-flow: row wrap;
@@ -28,6 +75,8 @@
     font-size: 32px;
     font-weight: 500;
     color: #fff;
+    flex: 2;
+    text-align: center;;
 }
 
 .header-links {
@@ -53,6 +102,7 @@ a {
     font-size: 16px;
     color: #fff;
 }
+/* HEADER */
 
 /* MAIN */
 
