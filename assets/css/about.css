@@ -1,30 +1,24 @@
+/* ============================================
+   TIMBUKTU ABOUT PAGE CSS - SIMPLIFIED
+   ============================================ */
+
+/* Font Setup */
 @font-face {
     font-family: 'Cinzel';
     src: url('/assets/fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
 }
 
-/* Logo default state (black before animation) */
-.header-logo {
-    font-family: 'Cinzel', serif;
-    color: black;            /* start black */
-    animation: logoFadeIn 5s forwards; /* play once on load */
-}
-
-/* Keyframes for fade from black → white */
-@keyframes logoFadeIn {
-    0%, 10%   { color: black; }   /* initial black */
-    100% { color: white; }   /* final white */
-}
-
-
-/* Universal Configuration */
+/* Reset all browser defaults */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Cinzel', serif;
+    box-sizing: border-box;
 }
 
-/* HEADER */
+/* ============================================
+   HEADER - Black bar at top with navigation
+   ============================================ */
 .header-container {
     display: flex;
     flex-flow: row wrap;
@@ -35,68 +29,222 @@
     gap: 50px;
 }
 
+/* Logo text - fades from black to white on page load */
 .header-logo {
     font-size: 32px;
-    font-weight: 500;
     color: #fff;
     flex: 2;
-    text-align: center;;
+    text-align: center;
+    animation: logoFadeIn 5s forwards;
 }
 
-.header-links {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 20px;
-    font-size: 16px;
+@keyframes logoFadeIn {
+    0%, 10% { color: black; }
+    100% { color: white; }
 }
 
-.nav-list{
+/* Navigation menu list */
+.nav-list {
     display: flex;
-    flex: auto;
-    flex-flow: row wrap;
     list-style: none;
-    justify-content: center;
-    align-items: center;
     gap: 40px;
 }
 
-.nav-item {
-    padding: 0px;
-    color: white;
-}
-
-.nav-item a:link {
-    color: inherit;        
+/* Navigation links - white text, rounded buttons */
+.nav-item a {
+    color: #fff;
     text-decoration: none;
-
     background-color: #000;
     border: 2px solid #fff;
     padding: 10px;
     border-radius: 36px;
-    font-size: 16px;
-    color: #fff;
 }
-.nav-item a:visited {
-    color: inherit;        
-    text-decoration: none;
-}
+
 .nav-item a:hover {
     color: black;
-    background-color: white;        
-    border-color: black;
-    text-decoration: none;
+    background-color: white;
 }
 
-.nav-item a:active {   
-    color: black;        
-    text-decoration: none;
-    background-color: #FFD700;
-    border-color: #C0C0C0;
-
+/* ============================================
+   MAIN BODY - Gold background wrapper
+   ============================================ */
+.main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 100px;
+    background-color: #FFD700; /* Gold */
 }
-/* HEADER */
 
-/* MAIN */
+/* ============================================
+   CEO SECTION - Image and name card
+   ============================================ */
+.img-pos {
+    text-align: center;
+}
 
-/* FOOTER */
+.autobio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* CEO photo */
+#ceo-img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 36px;
+    border: 4px solid #C0C0C0;
+}
+
+/* Name and title card - Silver background */
+#name-title {
+    text-align: center;
+    background-color: #C0C0C0; /* Silver */
+    border: 3px solid #000;
+    padding: 30px 50px;
+    border-radius: 36px;
+}
+
+/* ============================================
+   COMPANY OVERVIEW - Black box, white text
+   ============================================ */
+.comp-over {
+    background-color: #000; /* Black */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 60px 80px;
+    border-radius: 36px;
+    border: 3px solid #C0C0C0;
+}
+
+.comp-over h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFD700; /* Gold underline */
+}
+
+.comp-over h1:first-child {
+    margin-top: 0;
+}
+
+.comp-over h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* ============================================
+   MANIFESTO - Silver box, black text
+   ============================================ */
+.manfesto {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.autobio-text {
+    background-color: #C0C0C0; /* Silver */
+    color: #000; /* Black text */
+    padding: 60px 80px;
+    border-radius: 36px;
+    border: 3px solid #000;
+}
+
+.autobio-text h1 {
+    color: #000;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.autobio-text h2 {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ============================================
+   BUSINESS RESUME - Black box, white text
+   ============================================ */
+.busi-resume {
+    background-color: #000; /* Black */
+    color: #fff; /* White text */
+    padding: 60px 80px;
+    border-radius: 36px;
+    border: 3px solid #C0C0C0;
+}
+
+.busi-resume h1 {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #FFD700; /* Gold underline */
+}
+
+.busi-resume h1:first-child {
+    margin-top: 0;
+}
+
+.busi-resume h2 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+/* ============================================
+   CORE VALUES - Silver box, black text
+   ============================================ */
+.main-body > div:last-child {
+    background-color: #C0C0C0; /* Silver */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 60px 80px;
+    border-radius: 36px;
+    border: 3px solid #000;
+}
+
+.main-body > div:last-child h1 {
+    color: #000;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-body > div:last-child h2 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE - Smaller screens
+   ============================================ */
+@media (max-width: 768px) {
+    .main-body {
+        padding: 30px 20px;
+        gap: 50px;
+    }
+    
+    .comp-over,
+    .autobio-text,
+    .busi-resume,
+    .main-body > div:last-child {
+        padding: 40px 30px;
+    }
+    
+    #ceo-img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
