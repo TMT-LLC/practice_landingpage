@@ -67,10 +67,11 @@
 
 /* ============================================
    MAIN BODY - Gold background wrapper
+   Uses column layout for sections
    ============================================ */
 .main-body {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack sections vertically */
     align-items: center;
     gap: 80px;
     padding: 50px 100px;
@@ -109,7 +110,25 @@
 }
 
 /* ============================================
+   ROW CONTAINER - Wrapper for side-by-side sections
+   Used for Company Overview + Core Values
+   ============================================ */
+.row-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 80px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.row-container > div {
+    flex: 1; /* Each child takes equal space */
+    min-width: 400px; /* Minimum width before wrapping */
+}
+
+/* ============================================
    COMPANY OVERVIEW - Black box, white text
+   LEFT side, paired with Core Values
    ============================================ */
 .comp-over {
     background-color: #000; /* Black */
@@ -140,10 +159,37 @@
 }
 
 /* ============================================
+   CORE VALUES - Silver box, black text
+   RIGHT side, paired with Company Overview
+   ============================================ */
+.row-container > div:nth-child(2) {
+    background-color: #C0C0C0; /* Silver */
+    color: #000; /* Black text */
+    text-align: center;
+    align-self:center;
+    padding: 60px 80px;
+    border-radius: 36px;
+    border: 3px solid #000;
+}
+
+.row-container > div:nth-child(2) h1 {
+    color: #000;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.row-container > div:nth-child(2) h2 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* ============================================
    MANIFESTO - Silver box, black text
+   Stacked in column layout
    ============================================ */
 .manfesto {
-    width: 100%;
     max-width: 1200px;
 }
 
@@ -172,13 +218,16 @@
 
 /* ============================================
    BUSINESS RESUME - Black box, white text
+   Stacked in column layout
    ============================================ */
 .busi-resume {
+    max-width: 1200px;
     background-color: #000; /* Black */
     color: #fff; /* White text */
     padding: 60px 80px;
     border-radius: 36px;
     border: 3px solid #C0C0C0;
+    text-align: center;
 }
 
 .busi-resume h1 {
@@ -200,31 +249,7 @@
     font-weight: 400;
     line-height: 1.8;
     padding-left: 20px;
-}
-
-/* ============================================
-   CORE VALUES - Silver box, black text
-   ============================================ */
-.main-body > div:last-child {
-    background-color: #C0C0C0; /* Silver */
-    color: #000; /* Black text */
-    text-align: center;
-    padding: 60px 80px;
-    border-radius: 36px;
-    border: 3px solid #000;
-}
-
-.main-body > div:last-child h1 {
-    color: #000;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.main-body > div:last-child h2 {
-    color: #000;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.8;
+    padding-bottom: 20px;
 }
 
 /* ============================================
@@ -239,7 +264,7 @@
     .comp-over,
     .autobio-text,
     .busi-resume,
-    .main-body > div:last-child {
+    .row-container > div:nth-child(2) {
         padding: 40px 30px;
     }
     
