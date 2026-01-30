@@ -1,5 +1,5 @@
 /* ============================================
-   TIMBUKTU ABOUT PAGE CSS - SIMPLIFIED
+   TIMBUKTU ABOUT PAGE CSS - RESPONSIVE
    ============================================ */
 
 /* Font Setup */
@@ -31,7 +31,9 @@
 
 /* Logo text - fades from black to white on page load */
 .header-logo {
+    font-family: 'Cinzel', serif;
     font-size: 32px;
+    font-weight: 500;
     color: #fff;
     flex: 2;
     text-align: center;
@@ -43,26 +45,61 @@
     100% { color: white; }
 }
 
+/* Navigation wrapper */
+.header-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
 /* Navigation menu list */
 .nav-list {
     display: flex;
+    flex: auto;
+    flex-flow: row wrap;
     list-style: none;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
 }
 
+/* Navigation items */
+.nav-item {
+    padding: 0px;
+    color: white;
+}
+
 /* Navigation links - white text, rounded buttons */
-.nav-item a {
-    color: #fff;
+.nav-item a:link {
+    color: inherit;
     text-decoration: none;
     background-color: #000;
     border: 2px solid #fff;
     padding: 10px;
     border-radius: 36px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.nav-item a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 .nav-item a:hover {
     color: black;
     background-color: white;
+    border-color: black;
+    text-decoration: none;
+}
+
+.nav-item a:active {
+    color: black;
+    text-decoration: none;
+    background-color: #FFD700;
+    border-color: #C0C0C0;
 }
 
 /* ============================================
@@ -71,11 +108,11 @@
    ============================================ */
 .main-body {
     display: flex;
-    flex-direction: column; /* Stack sections vertically */
+    flex-direction: column;
     align-items: center;
     gap: 80px;
     padding: 50px 100px;
-    background-color: #FFD700; /* Gold */
+    background-color: #FFD700;
 }
 
 /* ============================================
@@ -90,6 +127,8 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    width: 100%;
+    max-width: 600px;
 }
 
 /* CEO photo */
@@ -103,10 +142,11 @@
 /* Name and title card - Silver background */
 #name-title {
     text-align: center;
-    background-color: #C0C0C0; /* Silver */
+    background-color: #C0C0C0;
     border: 3px solid #000;
     padding: 30px 50px;
     border-radius: 36px;
+    width: 100%;
 }
 
 /* ============================================
@@ -116,14 +156,15 @@
 .row-container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     gap: 80px;
     width: 100%;
     max-width: 1400px;
 }
 
 .row-container > div {
-    flex: 1; /* Each child takes equal space */
-    min-width: 400px; /* Minimum width before wrapping */
+    flex: 1 1 400px;
+    min-width: 0;
 }
 
 /* ============================================
@@ -131,8 +172,8 @@
    LEFT side, paired with Core Values
    ============================================ */
 .comp-over {
-    background-color: #000; /* Black */
-    color: #fff; /* White text */
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 60px 80px;
     border-radius: 36px;
@@ -144,7 +185,7 @@
     font-size: 32px;
     margin-top: 25px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #FFD700; /* Gold underline */
+    border-bottom: 2px solid #FFD700;
 }
 
 .comp-over h1:first-child {
@@ -163,10 +204,10 @@
    RIGHT side, paired with Company Overview
    ============================================ */
 .row-container > div:nth-child(2) {
-    background-color: #C0C0C0; /* Silver */
-    color: #000; /* Black text */
+    background-color: #C0C0C0;
+    color: #000;
     text-align: center;
-    align-self:center;
+    align-self: center;
     padding: 60px 80px;
     border-radius: 36px;
     border: 3px solid #000;
@@ -190,12 +231,13 @@
    Stacked in column layout
    ============================================ */
 .manfesto {
+    width: 100%;
     max-width: 1200px;
 }
 
 .autobio-text {
-    background-color: #C0C0C0; /* Silver */
-    color: #000; /* Black text */
+    background-color: #C0C0C0;
+    color: #000;
     padding: 60px 80px;
     border-radius: 36px;
     border: 3px solid #000;
@@ -221,9 +263,10 @@
    Stacked in column layout
    ============================================ */
 .busi-resume {
+    width: 100%;
     max-width: 1200px;
-    background-color: #000; /* Black */
-    color: #fff; /* White text */
+    background-color: #000;
+    color: #fff;
     padding: 60px 80px;
     border-radius: 36px;
     border: 3px solid #C0C0C0;
@@ -236,7 +279,7 @@
     text-align: center;
     margin-top: 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #FFD700; /* Gold underline */
+    border-bottom: 2px solid #FFD700;
 }
 
 .busi-resume h1:first-child {
@@ -256,6 +299,11 @@
    MOBILE RESPONSIVE - Smaller screens
    ============================================ */
 @media (max-width: 768px) {
+    .header-container {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
     .main-body {
         padding: 30px 20px;
         gap: 50px;
@@ -271,5 +319,17 @@
     #ceo-img {
         width: 100%;
         max-width: 400px;
+    }
+
+    #name-title {
+        padding: 20px 30px;
+    }
+
+    .row-container {
+        gap: 50px;
+    }
+
+    .row-container > div {
+        flex: 1 1 100%;
     }
 }
