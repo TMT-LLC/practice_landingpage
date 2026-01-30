@@ -1,14 +1,110 @@
+/* ============================================
+   TIMBUKTU ABOUT PAGE CSS - RESPONSIVE
+   ============================================ */
+
+/* Font Setup */
 @font-face {
-    font-family: "Cinzel";
+    font-family: 'Cinzel';
     src: url('/assets/fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
 }
 
+/* Reset all browser defaults */
 * {
     margin: 0;
     padding: 0;
-    font-family: "Cinzel";
+    font-family: 'Cinzel', serif;
+    box-sizing: border-box;
 }
 
-.timbuktu {
-    font-family: 'wingdings'
+/* ============================================
+   HEADER - Black bar at top with navigation
+   Fixed positioning keeps it at top while scrolling
+   ============================================ */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    padding: 15px 50px;
+    gap: 50px;
+}
+
+/* Logo text - fades from black to white on page load */
+.header-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    flex: 2;
+    text-align: center;
+    animation: logoFadeIn 5s forwards;
+}
+
+@keyframes logoFadeIn {
+    0%, 10% { color: black; }
+    100% { color: white; }
+}
+
+/* Navigation wrapper */
+.header-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+/* Navigation menu list */
+.nav-list {
+    display: flex;
+    flex: auto;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Navigation items */
+.nav-item {
+    padding: 0px;
+    color: white;
+}
+
+/* Navigation links - white text, rounded buttons */
+.nav-item a:link {
+    color: inherit;
+    text-decoration: none;
+    background-color: #000;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 36px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.nav-item a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+    text-decoration: none;
+}
+
+.nav-item a:active {
+    color: black;
+    text-decoration: none;
+    background-color: #FFD700;
+    border-color: #C0C0C0;
 }
