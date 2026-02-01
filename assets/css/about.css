@@ -128,13 +128,14 @@
    ============================================ */
 .img-pos {
     text-align: center;
+    padding-top: 75px;
 }
 
 .autobio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
     width: 100%;
     max-width: 600px;
 }
@@ -152,7 +153,7 @@
     text-align: center;
     background-color: #C0C0C0;
     border: 3px solid #000;
-    padding: 30px 50px;
+    padding: 10px 50px;
     border-radius: 36px;
     width: 100%;
 }
