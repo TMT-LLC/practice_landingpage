@@ -1,0 +1,395 @@
+/* ============================================
+   TIMBUKTU MAINTENANCE PAGE CSS - RESPONSIVE
+   ============================================ */
+
+/* Font Setup */
+@font-face {
+    font-family: 'Cinzel';
+    src: url('/assets/fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
+}
+
+/* Reset all browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    box-sizing: border-box;
+}
+
+/* Body styling with elegant background */
+body {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* ============================================
+   HEADER - Black bar at top with navigation
+   Fixed positioning keeps it at top while scrolling
+   ============================================ */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    padding: 15px 50px;
+    gap: 50px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
+}
+
+/* Logo text - fades from black to white on page load */
+.header-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    flex: 2;
+    text-align: center;
+    animation: logoFadeIn 5s forwards;
+}
+
+@keyframes logoFadeIn {
+    0%, 10% { color: black; }
+    100% { color: white; }
+}
+
+/* Navigation wrapper */
+.header-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+/* Navigation menu list */
+.nav-list {
+    display: flex;
+    flex: auto;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Navigation items */
+.nav-item {
+    padding: 0px;
+    color: white;
+}
+
+/* Navigation links - white text, rounded buttons */
+.nav-item a:link {
+    color: inherit;
+    text-decoration: none;
+    background-color: #000;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 36px;
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-item a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.nav-item a:active {
+    color: black;
+    text-decoration: none;
+    background-color: #FFD700;
+    border-color: #C0C0C0;
+}
+
+/* ============================================
+   MAIN MAINTENANCE SECTION
+   ============================================ */
+.maintenance-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern */
+.maintenance-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(192, 192, 192, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.maintenance-container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo container with elegant animation */
+.logo-container {
+    margin-bottom: 40px;
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.maintenance-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+    transition: all 0.3s ease;
+}
+
+.maintenance-logo:hover {
+    filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.5));
+    transform: scale(1.05);
+}
+
+/* Content styling */
+.maintenance-content {
+    padding: 20px;
+}
+
+.maintenance-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+}
+
+/* Elegant divider */
+.divider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+    margin: 0 auto 30px;
+    animation: dividerExpand 2s ease-in-out infinite alternate;
+}
+
+@keyframes dividerExpand {
+    from {
+        width: 100px;
+    }
+    to {
+        width: 150px;
+    }
+}
+
+.maintenance-text {
+    font-size: 24px;
+    color: #C0C0C0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.maintenance-subtext {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 36px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #FFD700;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.maintenance-footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    .header-container {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+    
+    .header-logo {
+        font-size: 24px;
+    }
+    
+    .nav-list {
+        gap: 20px;
+    }
+    
+    .nav-item a:link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .maintenance-logo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .maintenance-title {
+        font-size: 36px;
+    }
+    
+    .maintenance-text {
+        font-size: 20px;
+    }
+    
+    .maintenance-subtext {
+        font-size: 14px;
+    }
+    
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 15px;
+    }
+    
+    .header-logo {
+        font-size: 20px;
+        flex: 1;
+    }
+    
+    .nav-list {
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+    .nav-item a:link {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .maintenance-main {
+        padding: 100px 15px 40px;
+    }
+    
+    .maintenance-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .maintenance-title {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    
+    .maintenance-text {
+        font-size: 18px;
+    }
+    
+    .maintenance-subtext {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+}

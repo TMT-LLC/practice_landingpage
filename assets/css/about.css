@@ -304,6 +304,27 @@
     padding-bottom: 20px;
 }
 
+/* FOOTER */
+
+.footer-container {
+    margin-top: auto;
+}
+
+.copywright {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    color: white;
+    background-color: #000000;
+}
+
+.button1 {
+    border-radius: 12px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+}
+
 /* ============================================
    MOBILE RESPONSIVE - Smaller screens
    ============================================ */
